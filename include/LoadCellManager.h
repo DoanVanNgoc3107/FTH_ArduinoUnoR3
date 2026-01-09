@@ -20,6 +20,11 @@ private:
     int doutPin;              ///< Chân DATA OUT của HX711
     int sckPin;               ///< Chân SERIAL CLOCK của HX711
     float calibrationFactor;  ///< Hệ số hiệu chuẩn để chuyển đổi giá trị đọc sang trọng lượng
+    float filteredWeight;     ///< Giá trị sau khi đã lọc
+    bool hasFilteredWeight;   ///< Đã có giá trị lọc lần đầu hay chưa
+    float noiseFloor;         ///< Ngưỡng triệt nhiễu nhỏ (gần 0g)
+    float spikeThreshold;     ///< Biên độ tối đa của nhiễu được chấp nhận
+    float alpha;              ///< Hệ số lọc mũ (0..1)
 
 public:
     /**

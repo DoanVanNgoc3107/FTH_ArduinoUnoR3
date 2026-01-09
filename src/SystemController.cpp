@@ -25,6 +25,8 @@ void SystemController::init() {
     Serial.println("Serial Initialized");
     
     loadCell->init();
+    loadCell->tare();  // Zero out the scale when empty
+    
     servoController->init();
     display->init();
     
@@ -34,13 +36,13 @@ void SystemController::init() {
 /**
  * Thực thi chu trình chính của hệ thống
  * Quy trình:
- * 1. Đọc trọng lượng từ cảm biến (lấy 10 mẫu để tăng độ chính xác)
+ * 1. Đọc trọng lượng từ cảm biến (5 mẫu - median filter nhanh và chính xác)
  * 2. Gửi dữ liệu qua Serial để giám sát
  * 3. Hiển thị lên màn hình LCD
  * 4. Xử lý logic phân loại
  */
 void SystemController::run() {
-    float weight = loadCell->getWeight(10);
+    float weight = loadCell->getWeight(5);  // 5 mẫu cho tốc độ tối ưu
     
     // Hiển thị qua Serial Monitor để debug
     Serial.print("Weight: ");

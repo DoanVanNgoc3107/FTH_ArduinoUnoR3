@@ -1,0 +1,29 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "PlatformIO: Build",
+			"type": "shell",
+			"command": "platformio",
+			"args": [
+				"run",
+				"-d",
+				"c:/Users/ngoc1/CLionProjects/FTH_ArduinoUno"
+			],
+			"group": "build"
+		},
+		{
+			"label": "PlatformIO: Upload",
+			"type": "shell",
+			"command": "platformio",
+			"args": [
+				"run",
+				"--target",
+				"upload",
+				"-d",
+				"c:/Users/ngoc1/CLionProjects/FTH_ArduinoUno"
+			],
+			"group": "build"
+		}
+	]
+}
