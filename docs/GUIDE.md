@@ -1,8 +1,11 @@
 # Hướng dẫn dự án :
 ## Thành Viên trong nhóm:
- - Trung Anh
- - Đạt
- - ....
+ - Phạm Trung Anh-104257
+ - Nguyễn Đức Đạt-104269
+ - Nguyễn Quang Hà-104277
 ## Mô tả dự án
-- Dự án này làm về phân loại sản phẩm theo cân nặng sử dụng arduino uno r3 làm vi điều khiển chính trong dự án
-- 
+- Dự án này là dự án thiết kế hệ thống về phân loại sản phẩm theo Trọng lượng sử dụng arduino uno R3 làm vi điều khiển chính trong dự án
+- Sử dụng loadcell để kiểm tra trọng lượng sản phẩm, sản phẩm sẽ được nhận diện và phân loại bởi cảm biến hồng ngoại và servo gạt.
+- Sản phẩm sau khi phân loại sẽ được đưa đến các thùng đựng khác nhau.
+- Dự án này có tính ứng dụng cao cho thực tiễn như các nghành logictics, vận tải, nông nghiệp, thực phẩm,...
+  
